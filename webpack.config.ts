@@ -5,8 +5,12 @@ import { name as title } from "./package.json"
 const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin")
 
 const config: Configuration = {
+  mode: "development",
   entry: "./frontend",
-  resolve: { extensions: [".ts", ".tsx", ".js", ".json", ".wasm"] },
+  resolve: {
+    alias: { "react-dom": "@hot-loader/react-dom" },
+    extensions: [".ts", ".tsx", ".js", ".json", ".wasm"],
+  },
   module: {
     rules: [
       {
@@ -19,6 +23,7 @@ const config: Configuration = {
               "@babel/preset-react",
               "@babel/preset-typescript",
             ],
+            plugins: ["react-hot-loader/babel"],
           },
         },
       },
