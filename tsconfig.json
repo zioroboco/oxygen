@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "plugins": [{ "name": "typescript-tslint-plugin" }],
+    "lib": ["es2018", "dom"],
+    "module": "commonjs",
+    "jsx": "react",
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "noEmit": true
+  }
+}

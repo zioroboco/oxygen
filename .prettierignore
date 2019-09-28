@@ -1,0 +1,13 @@
+*
+
+# Whitelist...
+!**/
+!*.ts
+!*.tsx
+!*.js
+!*.json
+!*.yaml
+!*.css
+
+# Explicitly ignore...
+**/node_modules/
