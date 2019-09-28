@@ -2,6 +2,8 @@ import * as HtmlWebpackPlugin from "html-webpack-plugin"
 import { Configuration } from "webpack"
 import { name as title } from "./package.json"
 
+const WasmPackPlugin = require("@wasm-tool/wasm-pack-plugin")
+
 const config: Configuration = {
   entry: "./frontend",
   resolve: { extensions: [".ts", ".tsx", ".js", ".json", ".wasm"] },
@@ -22,7 +24,10 @@ const config: Configuration = {
       },
     ],
   },
-  plugins: [new HtmlWebpackPlugin({ title })],
+  plugins: [
+    new HtmlWebpackPlugin({ title }),
+    new WasmPackPlugin({ crateDirectory: __dirname }),
+  ],
 }
 
 export default config

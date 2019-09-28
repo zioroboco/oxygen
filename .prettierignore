@@ -11,3 +11,5 @@
 
 # Explicitly ignore...
 **/node_modules/
+**/pkg
+**/target

@@ -13,4 +13,7 @@ const render = (Component: typeof Root) => {
   )
 }
 
+// @ts-ignore
+import("../pkg").catch(console.error)
+
 render(Root)

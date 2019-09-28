@@ -1,4 +1,5 @@
 node_modules
 yarn-*.log
 /target
+/pkg
 **/*.rs.bk
